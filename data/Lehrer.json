@@ -1,0 +1,284 @@
+{
+    "Planeigenschaften": {
+        "maxStunden": 10,
+        "wochentage": [
+            "Montag",
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag"
+        ],
+        "stundenraster": [
+            {
+                "art": "stunde",
+                "bez": "1.",
+                "von": "07:30",
+                "bis": "08:15"
+            },
+            {
+                "art": "stunde",
+                "bez": "2.",
+                "von": "08:15",
+                "bis": "09:00"
+            },
+            {
+                "art": "pause",
+                "bez": "1. Pause",
+                "von": "09:00",
+                "bis": "09:15"
+            },
+            {
+                "art": "stunde",
+                "bez": "3.",
+                "von": "09:15",
+                "bis": "10:00"
+            },
+            {
+                "art": "stunde",
+                "bez": "4.",
+                "von": "10:00",
+                "bis": "10:45"
+            },
+            {
+                "art": "pause",
+                "bez": "2. Pause",
+                "von": "10:45",
+                "bis": "11:00"
+            },
+            {
+                "art": "stunde",
+                "bez": "5.",
+                "von": "11:00",
+                "bis": "11:45"
+            },
+            {
+                "art": "stunde",
+                "bez": "6.",
+                "von": "11:45",
+                "bis": "12:30"
+            },
+            {
+                "art": "pause",
+                "bez": "3. Pause",
+                "von": "12:30",
+                "bis": "12:55"
+            },
+            {
+                "art": "stunde",
+                "bez": "7.",
+                "von": "12:55",
+                "bis": "13:40"
+            },
+            {
+                "art": "stunde",
+                "bez": "8.",
+                "von": "13:40",
+                "bis": "14:25"
+            }
+        ]
+    },
+    "Lehrer": [
+        {
+            "kuerzel": "PET",
+            "vorname": "Frank",
+            "nachname": "Petersohn",
+            "sollstunden": 24
+        },
+        {
+            "kuerzel": "Becht",
+            "vorname": "Mario",
+            "nachname": "Bechtel",
+            "sollstunden": 24
+        }
+    ],
+    "Klassen": [
+        {
+            "klassenbez": "8A"
+        },
+        {
+            "klassenbez": "11IT"
+        },
+        {
+            "klassenbez": "12FOTi"
+        },
+        {
+            "klassenbez": "11BüAT"
+        }
+    ],
+    "Raeume": [
+        {
+            "raumbez": "R214"
+        },
+        {
+            "raumbez": "R039"
+        },
+        {
+            "raumbez": "RaumEins"
+        },
+        {
+            "raumbez": "RaumZwei"
+        }
+    ],
+    "Faecher": [
+        {
+            "fachbez": "Deutsch"
+        },
+        {
+            "fachbez": "Mathematik"
+        },
+        {
+            "fachbez": "Kunst"
+        },
+        {
+            "fachbez": "Englisch"
+        },
+        {
+            "fachbez": "Politik"
+        },
+        {
+            "fachbez": "Sport"
+        },
+        {
+            "fachbez": "Informatik"
+        }
+    ],
+    "Planeintraege": [
+        {
+            "tag": 1,
+            "stunde_von": 1,
+            "stunde_bis": 2,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                }
+            ]
+        },
+        {
+            "tag": 1,
+            "stunde_von": 1,
+            "stunde_bis": 2,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                }
+            ]
+        },{
+            "tag": 3,
+            "stunde_von": 3,
+            "stunde_bis": 8,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                }
+            ]
+        },
+        {
+            "tag": 1,
+            "stunde_von": 3,
+            "stunde_bis": 4,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                },
+                {
+                    "raumbez": "R039"
+                }
+            ]
+        },
+        {
+            "tag": 2,
+            "stunde_von": 3,
+            "stunde_bis": 4,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                },
+                {
+                    "raumbez": "R039"
+                }
+            ]
+        },
+        {
+            "tag": 4,
+            "stunde_von": 3,
+            "stunde_bis": 6,
+            "lehrer": [
+                {
+                "kuerzel": "PET"
+                }
+            ],
+            "fach": "Informatik",
+            "klassen": [
+                {
+                    "klassenbez": "11BüAT"                    
+                },
+                {
+                    "klassenbez": "11FOTi"                    
+                }
+            ],
+            "raeume": [
+                {
+                    "raumbez": "R214"
+                },
+                {
+                    "raumbez": "R214"
+                }
+            ]
+        }
+    ]
+}

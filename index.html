@@ -1,0 +1,235 @@
+<body>
+
+  <head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="libs/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="libs/datatables/datatables.css">
+    <link rel="stylesheet" href="css/stpl.css">
+    <link rel="import" href="/modal/addroom.html">
+
+  </head>
+
+  <body>
+
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/bootstrap-icons/bootstrap-icons.json"></script>
+    <script src="./libs/datatables/datatables.js"></script>
+
+
+    <!--<script src="libs/popper.min.js"></script>-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <form class="form-inline">
+          <input data-datatyp="AllData" type='file' accept='json' onchange='openFile(event)'><br>
+          <img id='output'>
+        </form>
+        <form class="form-inline">
+          <button id="save_btn" class="btn btn-success btn-sm">Datei speichern</button>
+        </form>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+          <ul class="navbar-nav">
+
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dopdown20" data-bs-toggle="dropdown"
+                  aria-expanded="false">Lehrer</a>
+                <ul id="lehrerauswahl" class="dropdown-menu" aria-labelledby="dropdown20">
+                  <li><a class="dropdown-item" href="#">-</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown21" data-bs-toggle="dropdown"
+                  aria-expanded="false">Klassen</a>
+                <ul id="klassenauswahl" class="dropdown-menu" aria-labelledby="dropdown21">
+                  <li><a class="dropdown-item" href="#">-</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown22" data-bs-toggle="dropdown"
+                  aria-expanded="false">Räume</a>
+                <ul id="raumauswahl" class="dropdown-menu" aria-labelledby="dropdown22">
+                  <li><a class="dropdown-item" href="#">-</a></li>
+
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--- <div class="container-fluid p-3"> --> 
+  <div class="container-fluid p-3">
+    <div class="row">
+      <div class="col-3">
+        
+
+          <div class="form-group">
+            <div class="d-flex justify-content-between">
+              <label class="float-left fw-bold" for="lehrerliste">Lehrkräfte</label>
+              <span class="float-right">
+                <s></s>
+                <!-- <a href="#" id="" class="float-right"><i class="bi bi-file-earmark-arrow-up"></i></i></a>-->
+                <a href="#" id="" class="float-right"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                <a href="#" id="" class="float-right"><i class="bi bi-trash" style="color: red;"></i></a>
+                <a href="#" id="" class="float-right"><i class="bi bi-plus-circle" style="color: green;"></i></a>
+
+              </span>
+            </div>
+            <select id="lehrerliste" size="6" class="form-control">
+
+            </select>
+          </div>
+          <div class="form-group mt-3">
+            <div class="d-flex justify-content-between">
+              <label class="fw-bold" for="klassenliste">Klassen</label>
+              <span class="float-right">
+
+
+                <a href="#" id="" class="float-right"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                <a href="#" id="" class="float-right"><i class="bi bi-trash" style="color: red;"></i></a>
+                <a href="#" id="" class="float-right"><i class="bi bi-plus-circle" style="color: green;"></i></a>
+
+              </span>
+            </div>
+            <select id="klassenliste" size="6" class="form-control">
+
+            </select>
+          </div>
+          <div class="form-group mt-3">
+            <div class="d-flex justify-content-between">
+              <label for="faecherliste" class="fw-bold">Fächer</label>
+              <div class="float-right">
+
+
+                <a href="#" id="" class="float-right"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                <a href="#" id="del_subject_btn" class="float-right"><i class="bi bi-trash" style="color: red;"></i></a>
+                <a href="#" id="" class="float-right"><i class="bi bi-plus-circle" style="color: green;"></i></a>
+
+              </div>
+            </div>
+            <select id="faecherliste" multiple size="6" class="form-control">
+
+            </select>
+          </div>
+          <div class="form-group mt-3">
+            <div class="d-flex justify-content-between">
+              <label for="raumliste" class="fw-bold">Räume</label>
+              <div class="float-right">
+
+                <a href="#" id="import_room_btn" class="float-right"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                <a href="#" id="del_room_btn" class="float-right"><i class="bi bi-trash" style="color: red;"></i></a>
+                <a href="#" id="add_room_btn" class="float-right"><i class="bi bi-plus-circle"
+                    style="color: green;"></i></a>
+
+              </div>
+            </div>
+            <select id="raumliste" multiple size="6" class="form-control">
+
+            </select>
+          </div>
+        
+        
+        </div>
+        <div class="col-9">
+        
+
+          <div id="planheader">
+    
+
+          </div>
+          <div id="plancontent" class="container ">
+           <!--
+            <div id="sidebar-btn">
+              <span>---</span>
+              <span>--</span>
+              <span>-</span>
+            </div>
+            --> 
+            
+            <div class="row">
+              <div class="col">
+                Stunde
+              </div>
+              <div class="col">
+                Montag
+              </div>
+              <div class="col">
+                Dienstag
+              </div>
+              <div class="col">
+                Mittwoch
+              </div>
+              <div class="col">
+                Donnerstag
+              </div>
+              <div class="col">
+                Freitag
+              </div>
+            </div>
+          </div>
+
+          <button class="btn" onclick="test()">Test Button</button>
+
+        </div>
+      
+
+
+      <div id="modals"></div>
+
+
+
+
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="fileInputModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="fileInputModal_title">Modal title</h5>
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>-->
+            </div>
+            <div class="modal-body">
+              <div class="file-loading">
+                <input data-datatyp="roomimport" id="fileinput_txt" name="input-b9[]" multiple type="file"
+                  onchange='openFile(event)'>
+              </div>
+              <div id="kartik-file-errors"></div>
+            </div>
+            <!--
+            <div class="modal-footer">
+              <button id="file_cancel_btn" type="button" class="btn btn-secondary"
+                data-dismiss="modal">Abbrechen</button>
+              <button id="file_submit_btn" type="button" class="btn btn-primary"
+                title="">Save</button>
+            </div>
+-->
+          </div>
+        </div>
+      </div>
+
+
+      <script src="./libs/jquery.csv.min.js"></script>
+      <script src="./libs/bootbox/bootbox.min.js"></script>
+      <script src="./libs/bootbox/bootbox.locales.min.js"></script>
+      <script src="./js/start.js"></script>
+
+
+      <script src="./libs/bootstrap/js/bootstrap.bundle.js"></script>
+
+      <script src="./libs/datatables/datatables.js"></script>
+
+
+  </body>
